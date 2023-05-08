@@ -3,6 +3,7 @@ x=float(input('ВВЕДИТЕ X:'))
 y=float(input('ВВЕДИТЕ Y:'))
 
 if y==0: print('на НУЛЬ делить НЕльзя!','y=', y , 'попробуйте ещё')
+elif x==2 and y==2: print('x+y=',x + y,'И', 'x*y=',x * y, 'больше всех')
 else:
     s = x + y
     r = x - y
