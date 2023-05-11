@@ -11,3 +11,9 @@ for i in dct:
     print(i, '-', dct[i], sep=' ', end='\n')
 
 print(dct)
+
+a='a'
+z='0'
+if a> z: print(a, 'aaaaaa')
+elif z> a: print(z, 'bbbbbb')
+
