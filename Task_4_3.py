@@ -5,40 +5,40 @@
     # знаки препинания, цифры, пробелы игнорируются.
     # Вывод: если да, то True, усли нет, то False
 
+# Метод isalpha() не принимает никаких параметров,
+# возвращает False, если строка не содержит букв.
+# Метод lower() — это строковый метод, который возвращает
+# новую строку полностью в нижнем регистре
+# upper() — это строковый метод, который возвращает
+# новую строку полностью в ВЕРХНЕМ регистре
+# swapcase() — это строковый метод, который возвращает
+# новую строку полностью в ПРОТИВОПОЛОЖЕННОМ регистре
+# Функция sorted() создает новый отсортированный список,
+# а метод list.sort() сортирует список на месте
+
 st_1='1. Limes, 2. Luster'
 st_2='slime, rustle'
 
-s_0=''
+st_1=st_1.lower()
+st_2=st_2.lower()
 
-tes_1= set()
-tes_2= set()
+lst_1=[]
+lst_2=[]
 
-# добавление в мнжество tes_1 СТРОЧНЫХ букв из st_1
 for i in st_1:
-    if ord(i)>=65+32 and ord(i)<=90+32:
-        tes_1.add(i)
+    if(i.isalpha()) == True:
+        lst_1.append(i)
 
-# добавление в мнжество tes_1 ЗАГЛАВНЫХ  букв из st_1
-for i in st_1:
-    if ord(i)>=65 and ord(i)<=90:
-        tes_1.add(chr(ord(i)+32))
-
-# добавление в мнжество tes_2 СТРОЧНЫХ букв из st_2
 for i in st_2:
-    if ord(i)>=65+32 and ord(i)<=90+32:
-        tes_2.add(i)
+    if(i.isalpha()) == True:
+        lst_2.append(i)
 
-# добавление в мнжество tes_2 ЗАГЛАВНЫХ  букв из st_2
-for i in st_2:
-    if ord(i)>=65 and ord(i)<=90:
-        tes_2.add(chr(ord(i)+32))
+print(lst_1)
+print(lst_2)
 
-print(tes_1)
-print(tes_2)
+if lst_1.sort()==lst_2.sort():
+    print('True')
+else: print('False')
 
-# Симметричная разница a.symmetric_difference(b) или a^b
-if len(tes_1.symmetric_difference(tes_2)) == 0:
-    print(True)
-else: print(False)
 
 
