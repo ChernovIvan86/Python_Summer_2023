@@ -1,21 +1,6 @@
-print(123=='123')
-print('123'+'123')
-print(print(123))
-print(123,'123')
-print(print)
 
-                       # задать строку st, содержащую: 112225567789
-dct={1:3, 2:4, 3:5}                                      # задать пустой словарь
-for i in dct:
-    dct[i]=dct.get(i, 0)+1                      #
-    print(i, '-', dct[i], sep=' ', end='\n')
 
-print(dct)
 
-a='a'
-z='0'
-if a> z: print(a, 'aaaaaa')
-elif z> a: print(z, 'bbbbbb')
 #*****************************************************************************
 lst=['a','s','d','f','g']
 print(lst[-1])
@@ -35,17 +20,21 @@ e=round (m.sin(m.radians(360)), 1)               # round-необходима д
 print(a, b, c, d, e, sep='->')
 print(m.pi)
 #*****************************************************************************
-n=7
-for i in range(n):print(i)
+n=4
+lst = [[1], [1,1]]
+b=[1]
 
-print(n % 2)
+for i in range(2, n+1):
+    lst.append([1])
+    for k in range(1,i):
+        lst[i].append(lst[i-1][k-1]+lst[i-1][k])
+
+    lst[i]=lst[i]+b
+
+    print(lst[i])
+print(lst)
 
 #*****************************************************************************
-
-
-
-
-
 
 
 
