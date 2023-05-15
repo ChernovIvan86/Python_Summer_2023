@@ -43,7 +43,7 @@ while sta_sto < N // 2 :    # т.к. каждый из for отрезает ил
 
 	sta_sto += 1
 
-if (N % 2)==True: a[conter_yx][conter_yx] = conter_elem            # ???????конструкция????????
+if (N % 2): a[conter_yx][conter_yx] = conter_elem   # if n%2: эквивалентен оператору if n % 2 > 0:
 
 for y in range(N): print(a[y])
 
