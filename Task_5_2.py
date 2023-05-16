@@ -6,7 +6,6 @@
 # Например n=12 (12=(2**2)*(3**1)), вывод: 2 -2, 3 - 1.
 
 n=12
-
 lst=[]
 lst=[]
 
@@ -21,10 +20,32 @@ for i in lst:
 print('делители числа n=',n ,'без единицы :', lst)
 
 # тест простоты прямым перебором
-for i in lst:
-    for k in range(2,i):
-        if i%k==0 and k!=i: lst.remove(i)
+for i in range(0,len(lst)):
+    for k in range(2,int(lst[i])):
+        if (int(lst[i]))%k==0 and (int(lst[i]))!=k: lst[i]=0
 print(lst)
+#for i in range(0,len(lst)-1):
+i=0
+while i<len(lst):
+    if lst[i]==0:
+        lst.pop(i)
+        i = i - 1
+    i=i+1
+print('только простые делители числа n', lst)
+
+# вычисление степени простых делеителей числа n
+s_1=0
+k=n
+for i in range(0,len(lst)):
+    while k%lst[i]==0:
+        s_1=s_1+1
+        k=k/lst[i]
+    print('стапень',lst[i],'**', s_1)
+    k = n
+    s_1 = 0
+
+
+
 
 # Сложный вариант мы уже обсуждали, удалять делитель надо только один раз.
 # Можно проверять, есть ли он еще в списке, перед использованием remove

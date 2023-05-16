@@ -24,11 +24,12 @@ for i in range(2, n+1):
 #    print(lst[i])
 print(lst)
 for i in range (n):
-    print(lst[i])
+    print(*lst[i])
 
+#lst =[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 #o=1
 #for i in range (n):
-#    o=o*(n/2)-i
+#    o=o*(n/2)
 #    print(' '*o, lst[i])
 
 
