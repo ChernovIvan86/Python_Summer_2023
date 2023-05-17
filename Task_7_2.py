@@ -13,6 +13,8 @@
 
 def code(string, n):
 
+    n=n%26
+
     st_code=''
     lst=[]
 
@@ -43,4 +45,4 @@ def code(string, n):
 
     return st_code
 
-print(code('AYZ ayz', 1))
+print(code('abz', 54))
