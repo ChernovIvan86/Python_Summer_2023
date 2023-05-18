@@ -4,6 +4,8 @@
 # Написать функцию выдающую отсортированный список
 # из трёх самых больших значений массива
 
+# extend !!!!!!!!!!!!!!!!!!!!
+
 # import random as random
 from random import randint
 def search_max(n, m):
