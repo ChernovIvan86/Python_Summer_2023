@@ -1,27 +1,13 @@
+lst=[[1,5,3], [2,44,1,4], [3,3], [3,33,1,4]]
 
-string='AB abz Z'
-lst=[]
+x=set(map(len,lst))
+print(x)
 
-for i in string:
-    lst.append(i)
-print(*lst)
+print(list(map(len,lst)))
 
-for i in range(0,len(lst)):
-    num=ord (lst[i])
-    if num>=65 and num<=90:
-        num= num+1
-        if num>=90:
-            num = num - 26
-        lst[i]=chr(num)
+x=str(list(map(len,lst)))
+print(x)
 
-for i in range(0,len(lst)):
-    num=ord (lst[i])
-    if num>=65+32 and num<=90+32:
-        num= num+1
-        if num>=90+32:
-            num = num - 26
-        lst[i]=chr(num)
-
-print(lst)
-
+x=lambda y: ''.join(list(map(len,y)))
+print(x(lst))
 

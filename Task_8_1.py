@@ -5,20 +5,22 @@
     # если рядом стоят А и Г, то поменять их местами
     # если рядом стоят Ц и Т, то поместите АГ междуними.
 
-st_dna='АГЦТ'
+st_dna='АГГА'
 lst_dna=[]
 
 for i in st_dna:
     lst_dna.append(i)
 print(lst_dna)
 
-for i in range(0, len(lst_dna)-1):
+for i in range(0, len(lst_dna)-1, 2):
     if lst_dna[i]=='А' and lst_dna[i+1]=='Г':
         lst_dna[i] = 'Г'
         lst_dna[i + 1] = 'А'
+#        i=i+2
     elif lst_dna[i]=='Г' and lst_dna[i+1]=='А':
         lst_dna[i] = 'А'
         lst_dna[i + 1] = 'Г'
+#        i = i + 2
 print(lst_dna)
 
 #x=len(lst_dna)-1
