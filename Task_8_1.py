@@ -5,7 +5,7 @@
     # если рядом стоят А и Г, то поменять их местами
     # если рядом стоят Ц и Т, то поместите АГ междуними.
 
-st_dna='ТЦЦТ'
+st_dna='АГЦТ'
 lst_dna=[]
 
 for i in st_dna:
@@ -24,7 +24,7 @@ print(lst_dna)
 #x=len(lst_dna)-1
 #for i in range(0, x):
 i=0
-x=1
+x=len(lst_dna)
 while i<=x:
 
     if lst_dna[i]=='Ц' and lst_dna[i+1]=='Т':
@@ -40,11 +40,4 @@ while i<=x:
     i=i+1
     if i == x - 1: break
 print(lst_dna)
-
-
-
-#st_dna=''.join(lst_dna)
-#print(st_dna)
-#res = list(map(lambda st: str.replace(st, "ЦТ", "ЦАГТ"), lst_dna))
-#print(str(res))
 
