@@ -40,4 +40,5 @@ while i<=x:
     i=i+1
     if i == x - 1: break
 print(lst_dna)
+print(''.join(lst_dna))
 

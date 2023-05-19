@@ -11,9 +11,21 @@ for i in lst:
 print(lst)
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!->
-lst.sort(key=len)
+#sort_key=lambda x: (,)
+#lst.sort(key=sort_key)
 # <-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-print(lst)
+#print(lst)
+
+
+
+for i in range(0, len(lst)):
+    "".join(map(str, lst[i]))
+    print(lst.sort(key=len("".join(map(str, lst[i])))))
+    #print(len(str(lst[i])))
+    #print(str(lst[i]))
+#    print("".join(map(str, lst[i]))) # map() приводит все элементы списка к строке
+                                     # join() склеивает их в одну строку (""-без пробелов)
+
 
 
