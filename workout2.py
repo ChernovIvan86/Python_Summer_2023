@@ -1,13 +1,50 @@
-lst=[[1,5,3], [2,44,1,4], [3,3], [3,33,1,4]]
+f=open("test2.txt",'r', encoding='utf-8')
+s=f.readlines()
+print(s)
+for i in s:
+    if i.strip():     # или if i.strip() !='': или if i !='\n':
+        print(i.strip())
 
-x=set(map(len,lst))
-print(x)
+for i in range(9):
+    s = f.readline()
+    print(s.strip())
 
-print(list(map(len,lst)))
 
-x=str(list(map(len,lst)))
-print(x)
+for i in f:
+    print(i.strip())
+f.close()
 
-x=lambda y: ''.join(list(map(len,y)))
-print(x(lst))
+f=open("test2.txt",'w', encoding='utf-8')
+s='rtyuVVVVVV22'
+f.write(s+'\n')
+f.write(s+'\n')
+f.close()
 
+f=open("test2.txt",'r', encoding='utf-8')
+s=f.readlines()
+print(s)
+f.close()
+
+# прочитать из одного изаписать в другой .txt
+f=open("test2.txt",'r', encoding='utf-8')
+s=f.readlines()
+
+g=open("test111.txt",'w', encoding='utf-8')
+for i in s:
+    if set(i) & set('0123456789'):
+        pass
+    else:
+        g.write(i)
+        print(i)
+f.close()
+g.close()
+
+# прочитать из одного каждый второй символ изаписать в другой .txt
+f=open("test2.txt",'r', encoding='utf-8')
+s=f.read()
+f.close()
+g=open("test111.txt",'w', encoding='utf-8')
+for i in s[::2]:
+    g.write(i)
+    print(i, end='')
+g.close()
