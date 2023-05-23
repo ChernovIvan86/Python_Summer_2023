@@ -17,7 +17,21 @@ for i in range(0,len(lst)):
     elif lst[i] == 'A': lst[i] = d['A']
 print(lst)
 print(''.join(lst))
+# ************************************************
+# можно сразу писать
+# так без всяких if
 
-
+# for i in range(len(lst)):
+#    lst[i] = d[lst[i]]
+#или, в крайнем случае так, чтобы проверять, мало ли затесалась какая-то другая буква
+#for k, v in enumerate(lst):
+#    lst[k] = d.get(v, lst[k])
+# если буква v есть в словаре d, то заменяем ее, а если нет, то сохраняем старое значение.
+d={'G':'C', 'C':'G', 'T':'A', 'A':'T'}
+dnk=input()
+rnk=''
+for in dnk:
+    rnr+=d[i] или rnr+=d.get(i, i)
+print(rnk)
 
 

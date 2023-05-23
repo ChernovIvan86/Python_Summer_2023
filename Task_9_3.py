@@ -37,3 +37,16 @@ print(lst)
 
 for i in range(0,9):
     print(lst[i][0],' - ', lst[i][1])
+# ************************************************
+# dct.items() это примерно lst=list(zip(dct.keys(), dct.values()))
+x='dfgj;lgdfdnd'
+from collections import Counter
+d=Counter(x)   # Counter - работает почти как словарь
+b=dict(d)
+s=sorted(b.items(), key=lambda x: (x[1],x[0]))
+for i , j in s[:10]:
+    print(f"{repr(i)}-{j}")
+
+
+
+

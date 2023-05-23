@@ -43,3 +43,22 @@ for i in range (1,len(lst)):
     else: pass
 
 print('Список похожих слов: ', *res)
+# ************************************************
+# Остроумно, хотя и громоздко.if в 24 стр.можно и нужно заменить на
+# if lst_i[j] in 'ауоыиэяюёе':
+
+s='питон'
+def maska(x):
+    res=[]
+    for i, j in enumerate(x):
+        if j in 'ауоыиэяюёе':
+            res.append(i)
+    return res
+print(maska(s))
+
+out=[]
+z=['поросёнок', 'титан', 'итог', 'лавка', 'погост', 'кино']
+for i in z:
+    if maska(i)==maska(s)
+        out.append(i)
+print(*out)
