@@ -1,32 +1,41 @@
               # Task_7_2
 # Напишите программу, которая рассчитывает НОК (наим.общ. кратное),
 # для списка нат. уральных чисел lst=[12, 24, 36, 48].
-
+# НОК(a, b) - наименьшее число которе делиться и на a, и на b.
 # НОК = ab / НОД(a, b),
 # где a и b - это натуральные числа, НОД - наибольший общий делитель.
 
 
-lst=[12, 24, 36, 48]
+lst=[24, 12, 36, 48]
+lst.sort()
+print(lst)
+'''
+tes_div=set()
+def Max_Udiv(a, b):
+    for i in range(2, a+1):
+        if i % j == 0:
+        tes.add()
+'''
+tes_div=set()
+lst_Div=[]
+d={}
+tes_Udiv=set()
 
-lst_divider=[]
-lst_divider_j=[]
+# нахождение делителей (без единицы) каждого числа
+for i in range(0, len(lst)):
+    for j in range(2,lst[i]+1):
+        if lst[i]%j==0:
+            tes_div.add(j)
+    lst_Div.append(tes_div)
+    tes_div=set()
+lst_Div.sort(reverse=False)
+print(lst_Div)
 
-# нахождение делителей (без единицы и самого числа) каждого числа
-for i in lst:
-    for j in range(2,i):
-        if i%j==0:
-            lst_divider_j.append(j)
-    lst_divider.append(lst_divider_j)
-    lst_divider_j = []
-print(lst_divider)
+for i in range(0, len(lst_Div)-1):
+    tes_Udiv=lst_Div[0]&lst_Div[i]&lst_Div[i+1]
+print(tes_Udiv)
+Max_Udiv=max(tes_Udiv)
+print(Max_Udiv)
 
-# тест простоты прямым перебором
-for i in range(0,len(lst_divider)-1):
-    lst_divider_j=lst_divider[i]
-    for j in range(0,len(lst_divider_j)-1):
-        for k in range(2,j//2+1):
-            if lst_divider_j[j]%k==0 and lst_divider_j[j]!=k:
-                lst_divider_j.pop(j)
-    lst_divider[i]=lst_divider_j
-
-print(lst_divider)
+print(int(max(lst)*lst[lst.index(max(lst))-1]/Max_Udiv))
+# НОК = ab / НОД(a, b),
