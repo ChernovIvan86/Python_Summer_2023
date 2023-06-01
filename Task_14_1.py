@@ -5,7 +5,7 @@
 tes=set()
 def summ(num):
     if num==0: # базовое условие (которое останавливает рекурсию)
-        return tes
+        return
     el=num%10
     tes.add(el)
     num=num//10
@@ -14,4 +14,4 @@ def summ(num):
 #num=int(input('Введите число: '))
 num=123455
 summ(num)
-print(len(tes))
+print(sum(tes))
