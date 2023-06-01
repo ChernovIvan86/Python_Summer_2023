@@ -1,4 +1,4 @@
-              # Task_7_2
+              # Task_7_1
 # Напишите программу, которая рассчитывает НОК (наим.общ. кратное),
 # для списка нат. уральных чисел lst=[12, 24, 36, 48].
 # НОК(a, b) - наименьшее число которе делиться и на a, и на b.
@@ -9,13 +9,7 @@
 lst=[24, 12, 36, 48]
 lst.sort()
 print(lst)
-'''
-tes_div=set()
-def Max_Udiv(a, b):
-    for i in range(2, a+1):
-        if i % j == 0:
-        tes.add()
-'''
+
 tes_div=set()
 lst_Div=[]
 d={}
@@ -30,12 +24,11 @@ for i in range(0, len(lst)):
     tes_div=set()
 lst_Div.sort(reverse=False)
 print(lst_Div)
-
+# нахождение НОД (наибольший общий делитель)
 for i in range(0, len(lst_Div)-1):
     tes_Udiv=lst_Div[0]&lst_Div[i]&lst_Div[i+1]
 print(tes_Udiv)
 Max_Udiv=max(tes_Udiv)
 print(Max_Udiv)
-
+# нахождение и вывод НОК (наим.общ. кратное) # НОК = ab / НОД(a, b).
 print(int(max(lst)*lst[lst.index(max(lst))-1]/Max_Udiv))
-# НОК = ab / НОД(a, b),
